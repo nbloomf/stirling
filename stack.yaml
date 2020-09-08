@@ -2,3 +2,11 @@ resolver: lts-16.13
 
 packages:
 - .
+
+extra-deps:
+- vulkan-3.6.2@sha256:d0b1c4719f9385f040b43e9b79d035d639b2f6933e7828b04a8f4fe17aef4ceb,23120
+- git: https://github.com/expipiplus1/vulkan
+  commit: 10f1aabdb4ec7bfc5f2a2bd54838b677ff1fd796
+  subdirs:
+  - utils
+  - VulkanMemoryAllocator

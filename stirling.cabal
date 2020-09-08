@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: e986a208e58ab1308abc3fbb3a5d6e416d3450d33fee9dde474de87e15f114b3
+-- hash: fabcfb44eb9dae87430c182cab0470a68e51395af36ae4f6ca3d5e4c51a78953
 
 name:           stirling
 version:        0.1.0.0
@@ -27,13 +27,30 @@ source-repository head
 
 library
   exposed-modules:
+      Control.EventBus
       Lib
+      Show.Event
   other-modules:
       Paths_stirling
   hs-source-dirs:
       src
   build-depends:
-      base >=4.7 && <5
+      GLFW-b >=3.3.0.0
+    , JuicyPixels >=3.3.5
+    , VulkanMemoryAllocator >=0.3.5
+    , async >=2.2.2
+    , base >=4.7 && <5
+    , bytestring >=0.10.10.0
+    , fast-logger >=3.0.1
+    , linear >=1.21.1
+    , sdl2 >=2.5.2.0
+    , stm >=2.5.0
+    , text >=1.2.4.0
+    , time >=1.9.3
+    , transformers >=0.5.6.2
+    , vector >=0.12.1.2
+    , vulkan >=3.6.2
+    , vulkan-utils >=0.1.1.0
   default-language: Haskell2010
 
 executable stirling-exe
@@ -44,8 +61,23 @@ executable stirling-exe
       app
   ghc-options: -threaded -rtsopts -with-rtsopts=-N
   build-depends:
-      base >=4.7 && <5
+      GLFW-b >=3.3.0.0
+    , JuicyPixels >=3.3.5
+    , VulkanMemoryAllocator >=0.3.5
+    , async >=2.2.2
+    , base >=4.7 && <5
+    , bytestring >=0.10.10.0
+    , fast-logger >=3.0.1
+    , linear >=1.21.1
+    , sdl2 >=2.5.2.0
     , stirling
+    , stm >=2.5.0
+    , text >=1.2.4.0
+    , time >=1.9.3
+    , transformers >=0.5.6.2
+    , vector >=0.12.1.2
+    , vulkan >=3.6.2
+    , vulkan-utils >=0.1.1.0
   default-language: Haskell2010
 
 test-suite stirling-test
@@ -57,6 +89,21 @@ test-suite stirling-test
       test
   ghc-options: -threaded -rtsopts -with-rtsopts=-N
   build-depends:
-      base >=4.7 && <5
+      GLFW-b >=3.3.0.0
+    , JuicyPixels >=3.3.5
+    , VulkanMemoryAllocator >=0.3.5
+    , async >=2.2.2
+    , base >=4.7 && <5
+    , bytestring >=0.10.10.0
+    , fast-logger >=3.0.1
+    , linear >=1.21.1
+    , sdl2 >=2.5.2.0
     , stirling
+    , stm >=2.5.0
+    , text >=1.2.4.0
+    , time >=1.9.3
+    , transformers >=0.5.6.2
+    , vector >=0.12.1.2
+    , vulkan >=3.6.2
+    , vulkan-utils >=0.1.1.0
   default-language: Haskell2010

@@ -1,2 +1,4 @@
-# stirling
+stirling
+========
+
 a toy game engine

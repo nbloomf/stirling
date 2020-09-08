@@ -1,0 +1,60 @@
+name:                stirling
+version:             0.1.0.0
+github:              "nbloomf/stirling"
+license:             BSD3
+author:              "Nathan Bloomfield"
+maintainer:          "nbloomf@gmail.com"
+copyright:           "Automattic, Inc"
+
+extra-source-files:
+- README.md
+- ChangeLog.md
+
+# Metadata used when publishing your package
+# synopsis:            Short description of your package
+# category:            Web
+
+description:         Please see the README on GitHub at <https://github.com/nbloomf/stirling#readme>
+
+dependencies:
+- base >= 4.7 && < 5
+- async >= 2.2.2
+- bytestring >= 0.10.10.0
+- fast-logger >= 3.0.1
+- GLFW-b >=3.3.0.0
+- JuicyPixels >= 3.3.5
+- linear >= 1.21.1
+- sdl2 >= 2.5.2.0
+- stm >= 2.5.0
+- text >= 1.2.4.0
+- time >= 1.9.3
+- transformers >= 0.5.6.2
+- vector >= 0.12.1.2
+- vulkan >= 3.6.2
+- vulkan-utils >= 0.1.1.0
+- VulkanMemoryAllocator >= 0.3.5
+
+library:
+  source-dirs: src
+
+executables:
+  stirling-exe:
+    main:                Main.hs
+    source-dirs:         app
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - stirling
+
+tests:
+  stirling-test:
+    main:                Spec.hs
+    source-dirs:         test
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - stirling

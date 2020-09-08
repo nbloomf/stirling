@@ -1,0 +1,62 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.31.2.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: e986a208e58ab1308abc3fbb3a5d6e416d3450d33fee9dde474de87e15f114b3
+
+name:           stirling
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/nbloomf/stirling#readme>
+homepage:       https://github.com/nbloomf/stirling#readme
+bug-reports:    https://github.com/nbloomf/stirling/issues
+author:         Nathan Bloomfield
+maintainer:     nbloomf@gmail.com
+copyright:      Automattic, Inc
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+    ChangeLog.md
+
+source-repository head
+  type: git
+  location: https://github.com/nbloomf/stirling
+
+library
+  exposed-modules:
+      Lib
+  other-modules:
+      Paths_stirling
+  hs-source-dirs:
+      src
+  build-depends:
+      base >=4.7 && <5
+  default-language: Haskell2010
+
+executable stirling-exe
+  main-is: Main.hs
+  other-modules:
+      Paths_stirling
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , stirling
+  default-language: Haskell2010
+
+test-suite stirling-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Paths_stirling
+  hs-source-dirs:
+      test
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , stirling
+  default-language: Haskell2010
